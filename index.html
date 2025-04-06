@@ -4,63 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clutch Informática</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --cinza: #1f1f1f;
       --azul: #00bfff;
       --branco: #ffffff;
+      --cinza-claro: #2e2e2e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--cinza);
       color: var(--branco);
+      line-height: 1.6;
     }
 
     header {
-      background-color: var(--azul);
-      padding: 20px;
+      background-color: var(--cinza-claro);
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
     }
 
     header h1 {
-      margin: 0;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     nav {
       background-color: #151515;
       display: flex;
       justify-content: center;
-      padding: 10px;
+      padding: 15px;
+      gap: 30px;
     }
 
     nav a {
       color: var(--branco);
-      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--azul);
+    }
+
+    #hero {
+      background: linear-gradient(90deg, #1f1f1f, #2b2b2b);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--azul);
+    }
+
+    #hero p {
+      font-size: 1.1rem;
+      color: #ddd;
     }
 
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
     }
 
     section h2 {
       color: var(--azul);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "🛠️ ";
+      margin-right: 5px;
     }
 
     .contato a {
       display: inline-block;
-      margin: 10px 0;
-      padding: 10px 20px;
+      margin: 20px 0;
+      padding: 12px 24px;
       background-color: var(--azul);
       color: var(--branco);
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .contato a:hover {
+      background-color: #0095cc;
     }
 
     footer {
@@ -68,23 +121,30 @@
       text-align: center;
       padding: 20px;
       color: #aaa;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Clutch Informática</h1>
-    <p>Assistência técnica especializada para PCs, notebooks e celulares</p>
+    <p>Especialistas em tecnologia: para sua casa ou empresa</p>
   </header>
 
   <nav>
+    <a href="#hero">Início</a>
     <a href="#servicos">Serviços</a>
     <a href="#contato">Contato</a>
     <a href="https://www.instagram.com/clutch.infocwb/" target="_blank">Instagram</a>
   </nav>
 
+  <section id="hero">
+    <h2>Soluções rápidas e confiáveis</h2>
+    <p>Conserto de notebooks, PCs e celulares com atendimento ágil e profissional.</p>
+  </section>
+
   <section id="servicos">
-    <h2>Serviços</h2>
+    <h2>Nossos Serviços</h2>
     <ul>
       <li>Manutenção de notebooks e PCs</li>
       <li>Conserto e troca de peças</li>
@@ -105,3 +165,4 @@
   </footer>
 </body>
 </html>
+
